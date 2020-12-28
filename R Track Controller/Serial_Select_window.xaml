@@ -1,0 +1,38 @@
+﻿<Window x:Class="R_Track_Controller.Serial_Select_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:R_Track_Controller"
+        mc:Ignorable="d"
+       Title="Serial Select" Height="150" Width="300">
+    <Window.Resources>
+        <Style x:Key="textblock_font" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Grid.Row="0" Grid.Column="0" Margin="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="Combo_ports"
+                  >
+        </ComboBox>
+        <Button Grid.Row="0" Grid.Column="1" Margin="3" Name="Butt_port_refresh" Click="Butt_port_refresh_Click">
+            <Button.Content>
+                <TextBlock Text="포트 새로고침" Style="{StaticResource textblock_font}"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="3" Name="Butt_begin_connect" Click="Butt_begin_connect_Click">
+            <Button.Content>
+                <TextBlock Text="연결하기" Style="{StaticResource textblock_font}"/>
+            </Button.Content>
+        </Button>
+    </Grid>
+</Window>
